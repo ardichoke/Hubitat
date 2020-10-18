@@ -82,9 +82,7 @@ def zwaveEvent(hubitat.zwave.commands.meterv5.MeterReport cmd) {
 
 def zwaveEvent(hubitat.zwave.commands.basicv1.BasicSet cmd) {
   if (debugEnable) log.debug "BasicSet ${device.label?device.label:device.name}: ${cmd}"
-  if (infoEnable) log.info "${device.label?device.label:device.name}: Basic set received with value of ${cmd.value ? "
-  on " : "
-  off "}"
+  if (infoEnable) log.info "${device.label?device.label:device.name}: Basic set received with value of ${cmd.value ? 'on' : 'off'}"
   return createEvent(name: "switch", value: cmd.value ? "on" : "off", type: "physical")
 }
 
