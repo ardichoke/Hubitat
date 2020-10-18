@@ -16,7 +16,8 @@ metadata {
   definition(
     name: "Everspring On/Off Plug - AN186",
     namespace: "ardichoke",
-    author: "Ryan DeShone"
+    author: "Ryan DeShone",
+    importUrl: "https://raw.githubusercontent.com/ardichoke/Hubitat/main/Drivers/Everspring-AN186.groovy"
   ) {
     capability "Outlet"
     capability "Switch"
